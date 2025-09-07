@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -15,35 +19,43 @@
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
+  <main>
+     <!-- Rating state start -->
+     <form class="card__submit">
+      <div class="container__icon">
+        <img src="./images/icon-star.svg" alt="">
+      </div>
+      <h2 class="card__title">How did we do?</h2>
+      <p class="card__paragraph">
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <fieldset class="container__score">
+        <label><input type="radio" name="rating" value="1"><span class="custom">1</span></label>
+        <label><input type="radio" name="rating" value="2"><span class="custom">2</span></label>
+        <label><input type="radio" name="rating" value="3"><span class="custom">3</span></label>
+        <label><input type="radio" name="rating" value="4"><span class="custom">4</span></label>
+        <label><input type="radio" name="rating" value="5"><span class="custom">5</span></label>
+      </fieldset>
+      <button type="submit" class="button__submit">Submit</button>
+     </form>
+     <!-- Rating state end -->
+     <!-- Thank you state start -->
+      <article class="card__thankYou" hidden>
+        <img src="./images/illustration-thank-you.svg" alt="">
+        <p class="score__selected">You selected <span class="score"></span><!-- Add rating here --> out of 5</p>
+        <h2 class="">Thank you!</h2>
+        <p class="thank__paragraph">
+          We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!
+        </p>
+      </article>
+      <!-- Thank you state end -->
+   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./js/app.js"></script>
 </body>
 </html>
