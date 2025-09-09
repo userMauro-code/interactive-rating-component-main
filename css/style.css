@@ -102,3 +102,19 @@ label {
     letter-spacing: .1em;
 }
 
+
+@media(min-width: 900px) {
+    .custom:hover {
+        cursor: pointer;
+    }
+
+    input[type="radio"]:checked + .custom{
+        background-color: var(--color-neutralWhite);
+        color: var(--color-neutralGrey950);
+    }
+
+    .button__submit:hover {
+        background-color: var(--color-neutralWhite);
+        cursor: pointer;
+    }
+}
