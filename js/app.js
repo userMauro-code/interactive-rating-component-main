@@ -14,7 +14,11 @@ form.addEventListener('submit', (e) => {
         } 
     });
     if(select) {
-        console.log(select);
+        form.style.display = "none"
+
+        // cardThank.classList.add("show");
+        cardThank.style.display = "flex"
+        scoreSpan.textContent = select;
     }else{
         alert("elige por favor");
     }
